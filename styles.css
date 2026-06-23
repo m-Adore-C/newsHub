@@ -438,6 +438,20 @@ main {
     color: var(--ink-muted);
 }
 
+/* Lightbox modal for image viewing */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.75);
+    z-index: 300;
+}
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 90%; max-height: 90%; border-radius: 6px; }
+.lightbox .close { position: absolute; top: 18px; right: 18px; background: transparent; border: 0; color: #fff; font-size: 1.4rem; cursor: pointer; }
+
 .story-card .media svg {
     width: 28px;
     height: 28px;
@@ -511,6 +525,88 @@ main {
 .page-header {
     padding-block: var(--space-7) var(--space-6);
     border-bottom: 1px solid var(--border);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: var(--space-6);
+}
+
+.sidebar {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.sidebar-card {
+  padding: var(--space-5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+}
+
+.sidebar-subscribe .subscribe-form {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.subscribe-form input {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  background: transparent;
+  color: var(--ink);
+}
+
+.subscribe-form input::placeholder {
+  color: var(--ink-muted);
+}
+
+.popular-list {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.popular-list a {
+  color: var(--ink);
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.tag-pill {
+  display: inline-flex;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--ink);
+  font-size: 0.82rem;
+}
+
+.pagination {
+  margin-top: var(--space-6);
+  display: flex;
+  justify-content: center;
+}
+
+.story-card-hidden {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .page-header .eyebrow {

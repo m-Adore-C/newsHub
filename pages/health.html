@@ -11,6 +11,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="../styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "NewsHub — Health",
+  "description": "Stay informed with the latest health news, medical breakthroughs, and wellness insights.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "NewsHub"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "../index.html" },
+      { "@type": "ListItem", "position": 2, "name": "Health", "item": "health.html" }
+    ]
+  }
+}
+</script>
 </head>
 <body style="--page-accent:var(--c-health)">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -49,14 +68,155 @@
 
   <div class="page-header wrap">
     <h1>Health</h1>
+    <p class="page-dek">
+      Stay informed with the latest health news, medical breakthroughs, and wellness insights.
+    </p>
   </div>
 
-  <div class="wrap">
-    <div class="empty-state">
-      <div class="signal"></div>
-      <h2>No dispatches yet</h2>
-      <p>This section is wired up and ready. Health stories will appear here once the team starts publishing.</p>
-    </div>
+  <!-- HERO — featured health story -->
+  <section class="hero wrap">
+    <p class="eyebrow" style="--eyebrow-color:var(--c-health)">Featured</p>
+    <h1 class="hero-headline">How AI is transforming patient care and diagnostics</h1>
+    <p class="hero-dek">From triage chatbots to imaging assist tools, AI-driven solutions are reshaping clinical workflows and patient experiences.</p>
+    <p class="hero-meta">JUN 2026 — 6 MIN READ</p>
+  </section>
+
+  <div class="wrap content-grid">
+    <section class="section">
+      <h2 class="section-title">Recent Health Images</h2>
+      <div class="card-grid">
+        <article class="story-card">
+          <div class="media">
+            <a class="media-link" href="../images/ai-in-health-care.jpg">
+              <img src="../images/ai-in-health-care.jpg" alt="AI in health care" loading="lazy" width="640" height="400">
+            </a>
+          </div>
+          <p class="eyebrow" style="--eyebrow-color:var(--c-health)">Health</p>
+          <h3><a class="story-link" href="ai-in-health-care.html">AI in health care is shaping new patient workflows</a></h3>
+          <p>Artificial intelligence is helping clinicians streamline diagnosis and care delivery.</p>
+          <p class="timestamp">4 MIN READ</p>
+        </article>
+
+        <article class="story-card">
+          <div class="media">
+            <a class="media-link" href="../images/alzheimer.jpg">
+              <img src="../images/alzheimer.jpg" alt="Alzheimer's research" loading="lazy" width="640" height="400">
+            </a>
+          </div>
+          <p class="eyebrow" style="--eyebrow-color:var(--c-health)">Health</p>
+          <h3><a class="story-link" href="alzheimer-research.html">New Alzheimer’s research raises hopes for prevention</a></h3>
+          <p>Breakthrough studies are exploring early detection and treatment strategies.</p>
+          <p class="timestamp">5 MIN READ</p>
+        </article>
+
+        <article class="story-card">
+          <div class="media">
+            <a class="media-link" href="../images/ebola-and-hantavirus.jpg">
+              <img src="../images/ebola-and-hantavirus.jpg" alt="Ebola and hantavirus updates" loading="lazy" width="640" height="400">
+            </a>
+          </div>
+          <p class="eyebrow" style="--eyebrow-color:var(--c-health)">Health</p>
+          <h3><a class="story-link" href="ebola-hantavirus.html">Global outbreak monitoring for Ebola and hantavirus</a></h3>
+          <p>Health agencies continue surveillance and response planning across regions.</p>
+          <p class="timestamp">3 MIN READ</p>
+        </article>
+
+        <article class="story-card">
+          <div class="media">
+            <a class="media-link" href="../images/food-as-medicine.jpg">
+              <img src="../images/food-as-medicine.jpg" alt="Food as medicine concept" loading="lazy" width="640" height="400">
+            </a>
+          </div>
+          <p class="eyebrow" style="--eyebrow-color:var(--c-health)">Health</p>
+          <h3><a class="story-link" href="food-as-medicine.html">Food as medicine is moving into mainstream care</a></h3>
+          <p>Nutrition-driven programs are being adopted to reduce chronic disease risk.</p>
+          <p class="timestamp">4 MIN READ</p>
+        </article>
+
+        <article class="story-card">
+          <div class="media">
+            <a class="media-link" href="../images/gene-therapy.jpg">
+              <img src="../images/gene-therapy.jpg" alt="Gene therapy research" loading="lazy" width="640" height="400">
+            </a>
+          </div>
+          <p class="eyebrow" style="--eyebrow-color:var(--c-health)">Health</p>
+          <h3><a class="story-link" href="gene-therapy.html">Gene therapy trials push forward with new therapies</a></h3>
+          <p>Researchers are testing novel treatments for rare genetic conditions.</p>
+          <p class="timestamp">6 MIN READ</p>
+        </article>
+
+        <article class="story-card">
+          <div class="media">
+            <a class="media-link" href="../images/glp-1-drug.jpg">
+              <img src="../images/glp-1-drug.jpg" alt="GLP-1 drug news" loading="lazy" width="640" height="400">
+            </a>
+          </div>
+          <p class="eyebrow" style="--eyebrow-color:var(--c-health)">Health</p>
+          <h3><a class="story-link" href="glp-1-drug.html">GLP-1 drugs remain a major health industry story</a></h3>
+          <p>New data examines effectiveness, access, and patient impacts.</p>
+          <p class="timestamp">4 MIN READ</p>
+        </article>
+
+        <article class="story-card">
+          <div class="media">
+            <a class="media-link" href="../images/mental-health-crisis.jpg">
+              <img src="../images/mental-health-crisis.jpg" alt="Mental health crisis" loading="lazy" width="640" height="400">
+            </a>
+          </div>
+          <p class="eyebrow" style="--eyebrow-color:var(--c-health)">Health</p>
+          <h3><a class="story-link" href="mental-health-crisis.html">Mental health crisis coverage from the latest reports</a></h3>
+          <p>New stories highlight the ongoing demand for support and the policies driving change.</p>
+          <p class="timestamp">5 MIN READ</p>
+        </article>
+
+        <article class="story-card story-card-hidden">
+          <div class="media">
+            <a class="media-link" href="../images/nutrition-dark-matter.jpg">
+              <img src="../images/nutrition-dark-matter.jpg" alt="Nutrition dark matter" loading="lazy" width="640" height="400">
+            </a>
+          </div>
+          <p class="eyebrow" style="--eyebrow-color:var(--c-health)">Health</p>
+          <h3><a class="story-link" href="nutrition-trends.html">Nutrition trends reveal critical gaps in public health</a></h3>
+          <p>Reporting on how food and diet shape long-term wellbeing and prevention strategies.</p>
+          <p class="timestamp">4 MIN READ</p>
+        </article>
+      </div>
+      <div class="pagination">
+        <button type="button" class="btn btn-solid" id="load-more">Load more stories</button>
+      </div>
+    </section>
+    <aside class="sidebar">
+      <div class="sidebar-card sidebar-subscribe">
+        <p class="eyebrow" style="--eyebrow-color:var(--c-health)">Stay updated</p>
+        <h2>Subscribe for health updates</h2>
+        <p>Get the latest stories, analysis, and wellness guides in your inbox.</p>
+        <form class="subscribe-form" action="#" method="post">
+          <label for="subscribe-email" class="sr-only">Email address</label>
+          <input id="subscribe-email" type="email" name="email" placeholder="Email address" required>
+          <button type="submit" class="btn btn-solid">Subscribe</button>
+        </form>
+      </div>
+      <div class="sidebar-card">
+        <p class="eyebrow" style="--eyebrow-color:var(--c-health)">Popular</p>
+        <h2>Popular health reads</h2>
+        <ul class="popular-list">
+          <li><a href="ai-in-health-care.html">AI in health care is shaping new patient workflows</a></li>
+          <li><a href="alzheimer-research.html">New Alzheimer’s research raises hopes for prevention</a></li>
+          <li><a href="mental-health-crisis.html">Mental health crisis coverage from the latest reports</a></li>
+          <li><a href="food-as-medicine.html">Food as medicine is moving into mainstream care</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <p class="eyebrow" style="--eyebrow-color:var(--c-health)">Filter</p>
+        <h2>Health topics</h2>
+        <div class="tag-list">
+          <a href="#" class="tag-pill">Wellness</a>
+          <a href="#" class="tag-pill">Nutrition</a>
+          <a href="#" class="tag-pill">Research</a>
+          <a href="#" class="tag-pill">Policy</a>
+        </div>
+      </div>
+    </aside>
   </div>
 
 </main>
@@ -70,9 +230,54 @@
         <li><a href="#" title="Coming soon">Privacy</a></li>
       </ul>
     </nav>
-    <p class="footer-copy">© 2026 NewsHub. Template for internal use.</p>
+    <p class="footer-copy">© 2026 NewsHub.</p>
   </div>
 </footer>
 
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true">
+  <button class="close" aria-label="Close image">✕</button>
+  <img src="" alt="" />
+</div>
+
+<script>
+// Simple lightbox: open image in modal when `.media-link` clicked
+function closeLightbox(lb){
+  lb.classList.remove('open');
+  lb.querySelector('img').src = '';
+}
+
+document.addEventListener('click', function(e){
+  const link = e.target.closest('.media-link');
+  if(link){
+    e.preventDefault();
+    const lb = document.getElementById('lightbox');
+    const img = lb.querySelector('img');
+    img.src = link.href;
+    img.alt = link.querySelector('img')?.alt || '';
+    lb.classList.add('open');
+    return;
+  }
+
+  const lb = document.getElementById('lightbox');
+  if(lb.contains(e.target) && (e.target === lb || e.target.classList.contains('close'))){
+    closeLightbox(lb);
+  }
+});
+
+window.addEventListener('keydown', function(e){
+  const lb = document.getElementById('lightbox');
+  if(e.key === 'Escape' && lb.classList.contains('open')){
+    closeLightbox(lb);
+  }
+});
+
+const loadMoreBtn = document.getElementById('load-more');
+if(loadMoreBtn){
+  loadMoreBtn.addEventListener('click', function(){
+    document.querySelectorAll('.story-card-hidden').forEach(card => card.classList.remove('story-card-hidden'));
+    loadMoreBtn.style.display = 'none';
+  });
+}
+</script>
 </body>
 </html>
