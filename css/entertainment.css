@@ -1,0 +1,78 @@
+/* Entertainment page styles */
+
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/house.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--c-white);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Love Island Recap Section */
+.match-list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--space-5);
+}
+
+.match-row-link .match-row {
+  padding-block: var(--space-4);
+}
+
+.match-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+
+.match-teams {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.match-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--bg-subtle);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.match-row-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-top: 1px solid var(--border);
+  transition: background-color 0.2s var(--ease);
+}
+
+.match-row-link:last-of-type {
+  border-bottom: 1px solid var(--border);
+}
+
+.match-row-link:hover {
+  background: var(--bg-elevated);
+}
+
+/* Ensure consistent image sizes in story cards */
+.story-card .media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+}
+
+.story-card .media {
+  width: 300px;
+  height: 300px;
+}

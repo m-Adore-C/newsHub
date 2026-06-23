@@ -1,78 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NewsHub — Politics</title>
-<meta name="description" content="NewsHub — Politics section.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewsHub — Politics</title>
+  <meta name="description" content="NewsHub — Politics section.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap"
+    rel="stylesheet">
 
-<link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body style="--page-accent:var(--c-politics)">
-<a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<header class="site-header">
-  <div class="header-bar">
-    <a href="../index.html" class="logo">
-      <span class="logo-mark"></span>NEWS<span class="logo-hub">HUB</span>
-    </a>
+  <header class="site-header">
+    <div class="header-bar">
+      <a href="../index.html" class="logo">
+        <span class="logo-mark"></span>NEWS<span class="logo-hub">HUB</span>
+      </a>
 
-    <nav class="main-nav" aria-label="Primary">
-      <ul>
-        <li><a href="../index.html" class="nav-link" style="--nav-accent:var(--c-home)">Home</a></li>
-        <li><a href="sports.html" class="nav-link" style="--nav-accent:var(--c-sports)">Sports</a></li>
-        <li><a href="politics.html" class="nav-link is-active" style="--nav-accent:var(--c-politics)">Politics</a></li>
-        <li><a href="technology.html" class="nav-link" style="--nav-accent:var(--c-tech)">Technology</a></li>
-        <li><a href="health.html" class="nav-link" style="--nav-accent:var(--c-health)">Health</a></li>
-        <li><a href="entertainment.html" class="nav-link" style="--nav-accent:var(--c-entertainment)">Entertainment</a></li>
-      </ul>
-    </nav>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="../index.html" class="nav-link" style="--nav-accent:var(--c-home)">Home</a></li>
+          <li><a href="sports.html" class="nav-link" style="--nav-accent:var(--c-sports)">Sports</a></li>
+          <li><a href="politics.html" class="nav-link is-active" style="--nav-accent:var(--c-politics)">Politics</a>
+          </li>
+          <li><a href="technology.html" class="nav-link" style="--nav-accent:var(--c-tech)">Technology</a></li>
+          <li><a href="health.html" class="nav-link" style="--nav-accent:var(--c-health)">Health</a></li>
+          <li><a href="entertainment.html" class="nav-link"
+              style="--nav-accent:var(--c-entertainment)">Entertainment</a></li>
+        </ul>
+      </nav>
 
-    <div class="header-actions">
-      <button type="button" class="btn" title="Coming soon"><span class="btn-label">Log In</span></button>
-      <button type="button" class="btn btn-solid" title="Coming soon"><span class="btn-label">Sign Up</span></button>
-      <input type="checkbox" id="theme-toggle" class="theme-toggle-input" role="switch" aria-label="Toggle dark mode">
-      <label for="theme-toggle" class="theme-toggle">
-        <span class="icon-moon">☾</span>
-        <span class="icon-sun">☀</span>
-      </label>
+      <div class="header-actions">
+        <button type="button" class="btn" title="Coming soon"><span class="btn-label">Log In</span></button>
+        <button type="button" class="btn btn-solid" title="Coming soon"><span class="btn-label">Sign Up</span></button>
+        <input type="checkbox" id="theme-toggle" class="theme-toggle-input" role="switch" aria-label="Toggle dark mode">
+        <label for="theme-toggle" class="theme-toggle">
+          <span class="icon-moon">☾</span>
+          <span class="icon-sun">☀</span>
+        </label>
+      </div>
     </div>
-  </div>
 
-</header>
+  </header>
 
-<main id="main">
+  <main id="main">
 
-  <div class="page-header wrap">
-    <h1>Politics</h1>
-  </div>
-
-  <div class="wrap">
-    <div class="empty-state">
-      <div class="signal"></div>
-      <h2>No dispatches yet</h2>
-      <p>This section is wired up and ready. Politics stories will appear here once the team starts publishing.</p>
+    <div class="page-header wrap">
+      <h1>Politics</h1>
+      <p class="page-dek">
+        Stay informed with the latest political news, policy debates, governance updates, and global affairs.
+      </p>
     </div>
-  </div>
 
-</main>
+    <section class="section wrap">
+      <h2 class="section-title">Featured</h2>
+      <div class="card-grid">
 
-<footer class="site-footer wrap">
-  <div class="footer-bar">
-    <nav aria-label="Footer">
-      <ul class="footer-links">
-        <li><a href="#" title="Coming soon">About</a></li>
-        <li><a href="#" title="Coming soon">Contact</a></li>
-        <li><a href="#" title="Coming soon">Privacy</a></li>
-      </ul>
-    </nav>
-    <p class="footer-copy">© 2026 NewsHub.</p>
-  </div>
-</footer>
+        <article class="story-card">
+          <div class="media">
+            <img src="../images/rwanda_green_growth.png"
+              alt="Eco-friendly urban development and solar panels in Rwanda">
+          </div>
+          <p class="eyebrow" style="--eyebrow-color:var(--c-politics)">Politics</p>
+          <h3>Rwanda Approves Green Growth Strategy Policy</h3>
+          <p>Cabinet outlines ambitious targets for carbon neutrality, clean energy adoption, and sustainable urban
+            development by 2050.</p>
+          <p class="timestamp">6 MIN READ</p>
+        </article>
 
+        <article class="story-card">
+          <div class="media">
+            <img src="../images/stand-off.png" alt="U.S.-Iran Negociations">
+          </div>
+          <p class="eyebrow" style="--eyebrow-color:var(--c-politics)">Politics</p>
+          <h3>Diplomatic Stand-Off</h3>
+          <p>High-level talks in Switzerland concluded with a preliminary agreement where Tehran agreed
+            to allow the return of United Nations nuclear inspectors. Mediators and U.S. officials have
+            hailed the discussions as setting a solid foundation for peace, though the path to a finalized
+            treaty remains bumpy due to occasional diplomatic stalls and ongoing regional clashes.</p>
+          <p class="timestamp">6 MIN READ</p>
+        </article>
+
+
+        <article class="story-card">
+          <div class="media">
+            <img src="../images/au-summit.png" alt="African Union trade and political network map">
+          </div>
+          <p class="eyebrow" style="--eyebrow-color:var(--c-politics)">Politics</p>
+          <h3>AU Summit Addresses AfCFTA Implementation Barriers</h3>
+          <p>African leaders gather in Addis Ababa to tackle logistical bottlenecks and accelerate continental trade
+            integration.</p>
+          <p class="timestamp">7 MIN READ</p>
+        </article>
+
+        <article class="story-card">
+          <div class="media">
+            <img src="../images/citizen_governance.png" alt="Local citizen and leadership assembly in Rwanda">
+          </div>
+          <p class="eyebrow" style="--eyebrow-color:var(--c-politics)">Politics</p>
+          <h3>Policy Reforms Empower Citizen-Led Governance</h3>
+          <p>New decentralization initiatives empower citizens to directly influence district budget planning and
+            evaluate local leaders.</p>
+          <p class="timestamp">5 MIN READ</p>
+        </article>
+
+        <article class="story-card">
+          <div class="media">
+            <img src="../images/EAC_curency.png" alt="EAC Integration coins and flags">
+          </div>
+          <p class="eyebrow" style="--eyebrow-color:var(--c-politics)">Politics</p>
+          <h3>EAC Moves Closer to Unified Currency</h3>
+          <p>East African Community member states discuss key milestones in establishing a monetary union and boosting
+            regional trade integration.</p>
+          <p class="timestamp">5 MIN READ</p>
+        </article>
+
+        <article class="story-card">
+          <div class="media">
+            <img src="../images/rwanda-commonwealth.png" alt="Rwanda and Commonwealth flags on conference table">
+          </div>
+          <p class="eyebrow" style="--eyebrow-color:var(--c-politics)">Politics</p>
+          <h3>Rwanda Outlines Commonwealth Partnership Agenda</h3>
+          <p>Focus areas include youth empowerment, digital trade integration, and joint climate resilience initiatives.
+          </p>
+          <p class="timestamp">6 MIN READ</p>
+        </article>
+
+        <article class="story-card">
+          <div class="media">
+            <img src="../images/canada_nuclear.png" alt="Canada's nuclear Strategy">
+          </div>
+          <p class="eyebrow" style="--eyebrow-color:var(--c-politics)">Politics</p>
+          <h3>Canada unveils nuclear strategy in bid to become energy superpower</h3>
+          <p>The federal government has unveiled its new national nuclear strategy, which is part of Canada's larger
+            goal of
+            doubling its electrical grid capacity by 2050. Jillian Piper explains the push for what's being called a
+            "nuclear renaissance."</p>
+          <p class="timestamp">5 MIN READ</p>
+        </article>
+
+        <article class="story-card">
+          <div class="media">
+            <img src="../images/ruzizi_hydropower.png" alt="Large hydroelectric dam under construction">
+          </div>
+          <p class="eyebrow" style="--eyebrow-color:var(--c-politics)">Politics</p>
+          <h3>Regional Cooperation Secures Ruzizi III Funding</h3>
+          <p>Cross-border agreement paves the way for the Ruzizi III regional hydropower project, bringing electricity
+            to millions.</p>
+          <p class="timestamp">8 MIN READ</p>
+        </article>
+        <article class="story-card">
+          <div class="media">
+            <img src="../images/Tension_SouthChinaSea.png" alt="Tension in the South China Sea">
+          </div>
+          <p class="eyebrow" style="--eyebrow-color:var(--c-politics)">Politics</p>
+          <h3>China-Philippines Tensions:</h3>
+          <p>The maritime standoff in the South China Sea remains highly volatile. The Philippines has escalated
+            its deterrence efforts against Chinese maritime incursions by utilizing newly acquired Australian underwater
+            drones</p>
+          <p class="timestamp">7 MIN READ</p>
+        </article>
+
+
+      </div>
+    </section>
+    <!-- LATEST -->
+    <section class="section wrap" style="border-bottom:none;">
+      <h2 class="section-title">Latest in Global Politics</h2>
+      <div class="story-list">
+        <div class="story-row">
+          <span class="tag" style="--tag-color:var(--page-accent)">Climate</span>
+          <h4>UN Climate Summit reaches historic emissions agreement in Paris</h4>
+          <span class="timestamp">JUN 2026</span>
+        </div>
+        <div class="story-row">
+          <span class="tag" style="--tag-color:var(--page-accent)">Elections</span>
+          <h4>France electoral coalition secures parliament majority after tense runoff</h4>
+          <span class="timestamp">JUN 2026</span>
+        </div>
+        <div class="story-row">
+          <span class="tag" style="--tag-color:var(--page-accent)">Diplomacy</span>
+          <h4>G7 leaders pledge combined $50 billion infrastructure aid package for developing nations</h4>
+          <span class="timestamp">JUN 2026</span>
+        </div>
+        <div class="story-row">
+          <span class="tag" style="--tag-color:var(--page-accent)">Trade</span>
+          <h4>Global trade summit resolves long-standing digital tariffs dispute</h4>
+          <span class="timestamp">MAY 2026</span>
+        </div>
+        <div class="story-row">
+          <span class="tag" style="--tag-color:var(--page-accent)">Governance</span>
+          <h4>European Union officially approves landmark Artificial Intelligence Act</h4>
+          <span class="timestamp">MAY 2026</span>
+        </div>
+        <div class="story-row">
+          <span class="tag" style="--tag-color:var(--page-accent)">International</span>
+          <h4>United Nations announces new global treaty to combat ocean plastic pollution</h4>
+          <span class="timestamp">APR 2026</span>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="site-footer wrap">
+    <div class="footer-bar">
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="#" title="Coming soon">About</a></li>
+          <li><a href="#" title="Coming soon">Contact</a></li>
+          <li><a href="#" title="Coming soon">Privacy</a></li>
+        </ul>
+      </nav>
+      <p class="footer-copy">© 2026 NewsHub.</p>
+    </div>
 </body>
+
 </html>
