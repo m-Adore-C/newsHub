@@ -34,7 +34,7 @@
 
     <div class="header-actions">
       <button type="button" class="btn" title="Coming soon"><span class="btn-label">Log In</span></button>
-      <button type="button" class="btn btn-solid" title="Coming soon"><span class="btn-label">Sign Up</span></button>
+      <button id="open-signup" type="button" class="btn btn-solid" title="Sign up for NewsHub"><span class="btn-label">Sign Up</span></button>
       <input type="checkbox" id="theme-toggle" class="theme-toggle-input" role="switch" aria-label="Toggle dark mode">
       <label for="theme-toggle" class="theme-toggle">
         <span class="icon-moon">☾</span>
@@ -44,6 +44,83 @@
   </div>
 
 </header>
+
+<div id="signup-modal" class="modal" aria-hidden="true">
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="signup-title">
+    <button type="button" class="modal-close" id="close-signup" aria-label="Close sign up form">×</button>
+    <div class="modal-panel">
+      <h2 id="signup-title">Create Your Account</h2>
+      <p class="modal-description">Join NewsHub by providing your details below.</p>
+      <form id="signup-form" class="signup-form" novalidate>
+        <div class="form-row">
+          <label>
+            Full Name
+            <input type="text" name="fullName" placeholder="John Doe" required>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" required>
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            Password
+            <input type="password" name="password" placeholder="Create a password" required minlength="8">
+          </label>
+          <label>
+            Contact Number
+            <input type="tel" name="phone" placeholder="+250 780 123 456" pattern="[0-9+\s-]{8,20}" required>
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            Address
+            <input type="text" name="address" placeholder="Nyarugenge, Kigali" required>
+          </label>
+          <label>
+            Date of Birth
+            <input id="date-input" type="date" name="dob" required>
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            Occupation
+            <input type="text" name="occupation" placeholder="Journalist, Student, Freelancer">
+          </label>
+          <label>
+            Civil Status
+            <select name="status">
+              <option value="">Choose status</option>
+              <option value="single">Single</option>
+              <option value="married">Married</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            Gender
+            <select name="gender">
+              <option value="">Choose gender</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="nonbinary">Non-binary</option>
+              <option value="prefer-not">Prefer not to say</option>
+            </select>
+          </label>
+          <label>
+            Bio (Optional)
+            <textarea name="bio" placeholder="Tell us a little about yourself"></textarea>
+          </label>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-solid">Create account</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
 <main id="main">
 
@@ -153,5 +230,70 @@
   </div>
 </footer>
 
+<script>
+  const openSignup = document.getElementById('open-signup');
+  const signupModal = document.getElementById('signup-modal');
+  const closeSignup = document.getElementById('close-signup');
+  const signupForm = document.getElementById('signup-form');
+  const dateInput = document.getElementById('date-input');
+
+  const showSignup = () => {
+    signupModal.classList.add('is-open');
+    signupModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    dateInput.focus();
+  };
+
+  const hideSignup = () => {
+    signupModal.classList.remove('is-open');
+    signupModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    signupForm.reset();
+    dateInput.setCustomValidity('');
+  };
+
+  const validateDate = () => {
+    const value = dateInput.value;
+    if (!value) {
+      dateInput.setCustomValidity('Please enter your date of birth.');
+    } else {
+      const dob = new Date(value);
+      const today = new Date();
+      const age = today.getFullYear() - dob.getFullYear();
+      if (age < 13) {
+        dateInput.setCustomValidity('You must be at least 13 years old.');
+      } else {
+        dateInput.setCustomValidity('');
+      }
+    }
+  };
+
+  openSignup?.addEventListener('click', showSignup);
+  closeSignup?.addEventListener('click', hideSignup);
+  signupModal?.addEventListener('click', (event) => {
+    if (event.target.matches('[data-close-modal]')) hideSignup();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && signupModal.classList.contains('is-open')) {
+      hideSignup();
+    }
+  });
+
+  dateInput?.addEventListener('change', () => {
+    validateDate();
+  });
+
+  signupForm?.addEventListener('submit', (event) => {
+    validateDate();
+    if (!signupForm.checkValidity()) {
+      event.preventDefault();
+      signupForm.reportValidity();
+      return;
+    }
+    event.preventDefault();
+    alert('Account created!');
+    hideSignup();
+  });
+</script>
 </body>
 </html>

@@ -610,3 +610,129 @@ main {
 /* UTILITIES */
 
 .text-accent { color: var(--accent-ink); }
+
+/* Signup modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: var(--space-6);
+    background: rgba(14, 35, 45, 0.7);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s var(--ease);
+    z-index: 150;
+}
+
+.modal.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: transparent;
+}
+
+.modal-content {
+    position: relative;
+    width: min(760px, 100%);
+    max-height: calc(100vh - 3rem);
+    overflow-y: auto;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: var(--space-6);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.3);
+}
+
+.modal-close {
+    position: absolute;
+    right: var(--space-4);
+    top: var(--space-4);
+    border: none;
+    background: transparent;
+    color: var(--ink);
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal-panel {
+    display: grid;
+    gap: var(--space-5);
+}
+
+.modal-panel h2 {
+    font-size: 1.55rem;
+    margin-bottom: 0.5rem;
+}
+
+.modal-description {
+    margin: 0;
+    color: var(--ink-muted);
+    max-width: 46rem;
+}
+
+.signup-form {
+    display: grid;
+    gap: var(--space-5);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-4);
+}
+
+.form-row label {
+    display: grid;
+    gap: var(--space-2);
+    font-size: 0.9rem;
+    color: var(--ink);
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg);
+    color: var(--ink);
+    font: inherit;
+    transition: border-color 0.15s var(--ease), background-color 0.15s var(--ease);
+}
+
+.form-row textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(255, 85, 50, 0.16);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-row input:invalid,
+.form-row textarea:invalid,
+.form-row select:invalid {
+    border-color: #ff7f7f;
+}
+
+@media (max-width: 840px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
